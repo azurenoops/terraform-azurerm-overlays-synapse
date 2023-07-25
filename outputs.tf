@@ -5,8 +5,6 @@
 # Outputs    ##
 ###############
 
-# Add outputs for the resource
-# output "template_example" {
-#  value       = template.name
-#  description = "Resource group name"
-# }
+output "cognitive_account_id" {
+  value = var.create_cognitive_account ? element(azurerm_cognitive_account.cog.*.id, 0) : null
+}

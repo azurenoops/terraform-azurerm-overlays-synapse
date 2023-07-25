@@ -67,19 +67,8 @@ variable "existing_private_dns_zone" {
   default     = null
 }
 
-variable "private_subnet_address_prefix" {
-  description = "The name of the subnet for private endpoints"
-  default     = null
-}
-
-variable "create_private_endpoint_subnet" {
-  description = "Controls if the subnet should be created. If set to false, the subnet name must be provided. Default is false."
-  type        = bool
-  default     = false
-}
-
-variable "existing_private_subnet_name" {
-  description = "Name of the existing subnet for the private endpoint"
+variable "existing_subnet_id" {
+  description = "Id of the existing subnet ID for the private endpoint"
   default     = null
 }
 
