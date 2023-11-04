@@ -6,7 +6,6 @@ terraform.tfvars
 # Compiled files
 *.tfstate
 *.tfstate.backup
-*.tfvars
 
 **/.terraform.lock.hcl
 
