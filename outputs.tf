@@ -5,6 +5,17 @@
 # Outputs    ##
 ###############
 
-output "cognitive_account_id" {
-  value = var.create_cognitive_account ? element(azurerm_cognitive_account.cog.*.id, 0) : null
+output "id" {
+  description = "Synapse ID"
+  value       = azurerm_synapse_workspace.synapse.id
+}
+
+output "name" {
+  description = "Synapse name"
+  value       = azurerm_synapse_workspace.synapse.name
+}
+
+output "connectivity_endpoints" {
+  description = "A list of connectivity endpoints for this Synapse Workspace."
+  value       = azurerm_synapse_workspace.synapse.connectivity_endpoints
 }
