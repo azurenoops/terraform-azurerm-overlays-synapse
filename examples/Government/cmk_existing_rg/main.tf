@@ -51,8 +51,8 @@ module "mod_synapse" {
   //object_id = data.azurerm_client_config.current.object_id
 
   # SQL Defender settings 
-  auditing_policy_storage_account = azurerm_storage_account.logs.id
-  audit_retention_in_days         = 30
+  auditing_policy_storage_account_id = azurerm_storage_account.logs.id
+  audit_retention_in_days            = 30
 
   sql_defender = {
     retention_days = 30
