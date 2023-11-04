@@ -100,7 +100,7 @@ Synapse Overlay has optional features that can be enabled by setting parameters 
 
 ## Create resource group
 
-By default, this module will create a resource group and the name of the resource group to be given in an argument `resource_group_name`. If you want to use an existing resource group, specify the existing resource group name, and set the argument to `create_resource_group = false`.
+By default, this module will create a resource group and the name of the resource group to be given in an argument `existing_resource_group_name`. If you want to use an existing resource group, specify the existing resource group name, and set the argument to `create_synapse_resource_group = false`.
 
 > *If you are using an existing resource group, then this module uses the same resource group location to create all resources in this module.*
 
