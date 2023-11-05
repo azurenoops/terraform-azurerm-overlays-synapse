@@ -35,8 +35,8 @@ variable "org_name" {
 # RG Configuration   ##
 #######################
 
-variable "create_resource_group" {
-  description = "Controls if the resource group should be created. If set to false, the resource group name must be provided. Default is false."
+variable "create_synapse_resource_group" {
+  description = "Create a resource group for the Synapse Workspace. If set to false, the existing_resource_group_name variable must be set. Default is false."
   type        = bool
   default     = false
 }
@@ -62,19 +62,28 @@ variable "enable_private_endpoint" {
   default     = false
 }
 
-variable "existing_private_dns_zone" {
-  description = "Name of the existing private DNS zone"
+variable "existing_dev_private_dns_zone" {
+  description = "Name of the existing synapse dev private DNS zone"
   default     = null
 }
 
-variable "existing_subnet_id" {
-  description = "Id of the existing subnet ID for the private endpoint"
+variable "existing_sql_private_dns_zone" {
+  description = "Name of the existing synapse sql private DNS zone"
   default     = null
 }
 
-variable "virtual_network_name" {
+variable "existing_web_private_dns_zone" {
+  description = "Name of the existing synapse web private DNS zone"
+  default     = null
+}
+
+variable "existing_private_subnet_name" {
+  description = "Name of the existing subnet for the private endpoint"
+  default     = null
+}
+
+variable "existing_virtual_network_name" {
   description = "Name of the virtual network for the private endpoint"
   default     = null
 }
 
-# Add more variables as needed
